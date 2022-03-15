@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * main - prints ALX
+ * main - prints ALX Software
  *
  * Description: prints _putchar
  *
@@ -10,7 +10,7 @@
 
 int main(void)
 {
-	char text[10] = "ALX";
+	char text[10] = "ALXSoftware";
 	int i = 0;
 
 	for (i = 0; i < 9; i++)

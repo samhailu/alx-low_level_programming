@@ -1,11 +1,26 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
- * set_string - Sets the value of a pointer to a char
- * @s: Double pointer
- * @to: Pointer to char to be assigned to s
+ * print_diagsums - Prints sum of both diagonals individually
+ * @a: Pointer to the first element of matrix
+ * @size: Size of matrix sizeXsize
  */
-void set_string(char **s, char *to)
+void print_diagsums(int *a, int size)
 {
-	*s = to;
+	int i, j;
+	int main_diag_sum, sec_diag_sum;
+
+	main_diag_sum = 0;
+	sec_diag_sum = 0;
+
+	for (i = 0; i < size; i++)
+		for (j = 0; j < size; j++)
+			if (i == j)
+			{
+				main_diag_sum += a[(i * size) + j];
+				sec_diag_sum += a[(i * size) + (size - 1 - j)];
+			}
+
+	printf("%d, %d\n", main_diag_sum, sec_diag_sum);
 }
